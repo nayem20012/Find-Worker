@@ -76,7 +76,9 @@ class HireDetailsScreen extends StatelessWidget {
               const SizedBox(height: 8),
               CustomMultiLineText(title: AppString.descriptiondetails),
               const SizedBox(height: 24),
-              HireAction()
+              HireAction(),
+              const SizedBox(height: 88),
+
             ],
           ),
         ),

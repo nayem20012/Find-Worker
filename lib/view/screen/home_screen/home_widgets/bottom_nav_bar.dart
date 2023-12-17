@@ -1,4 +1,6 @@
 
+import 'package:find_worker/view/screen/hire%20details/hire_detals_screen.dart';
+import 'package:find_worker/view/screen/setting%20Screen/setting_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/app_image.dart';
@@ -18,10 +20,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int currentIndex = 0;
 
   List navigationPagesList = [
-    HomeScreen(),
+    const HomeScreen(),
     CategoriesScreen(),
-    HireListScreen(),
-    ProfileScreen()
+    HireDetailsScreen(),
+    SettingScreen()
   ];
 
   @override
