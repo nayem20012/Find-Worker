@@ -1,7 +1,8 @@
 import 'package:find_worker/view/screen/sign_up_screen.dart';
 import 'package:flutter/material.dart';
-import '../../utils/const_image.dart';
-import '../../utils/const_string.dart';
+import 'package:get/get.dart';
+import '../../utils/app_image.dart';
+import '../../utils/app_string.dart';
 import '../widgets/custom_background.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -13,10 +14,8 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    double width = MediaQuery.of(context).size.width ;
-    double height = MediaQuery.of(context).size.height ;
-
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: CustomBackground(
@@ -27,7 +26,7 @@ class SignInScreen extends StatelessWidget {
           ),
           Center(
             child: Text(
-              ConstString.welcomeToFindWorker,
+              AppString.welcomeToFindWorker,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Color(0xFF333333),
@@ -42,7 +41,7 @@ class SignInScreen extends StatelessWidget {
             height: 40,
           ),
           Image.asset(
-            ConstImage.logo,
+            AppImage.logo,
             width: 80,
             height: 80,
           ),
@@ -64,7 +63,7 @@ class SignInScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              ConstString.email,
+                              AppString.email,
                               style: const TextStyle(
                                 color: Color(0xFF333333),
                                 fontSize: 14,
@@ -74,30 +73,34 @@ class SignInScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 8,),
+                        const SizedBox(
+                          height: 8,
+                        ),
                         TextFormField(
                           autovalidateMode: AutovalidateMode.onUserInteraction,
                           controller: emailController,
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return 'please enter ${ConstString.email}';
+                              return 'please enter ${AppString.email}';
                             }
                             return null;
                           },
                           decoration: InputDecoration(
                               fillColor: Colors.white,
                               filled: true,
-                              labelText: ConstString.enterYourEmail,
+                              labelText: AppString.enterYourEmail,
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
                         ),
-                        const SizedBox(height: 16,),
+                        const SizedBox(
+                          height: 16,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              ConstString.password,
+                              AppString.password,
                               style: const TextStyle(
                                 color: Color(0xFF333333),
                                 fontSize: 14,
@@ -107,27 +110,31 @@ class SignInScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 8,),
+                        const SizedBox(
+                          height: 8,
+                        ),
                         TextFormField(
                           obscureText: true,
                           autovalidateMode: AutovalidateMode.onUserInteraction,
                           controller: passwordController,
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return 'please enter ${ConstString.password}';
+                              return 'please enter ${AppString.password}';
                             }
                             return null;
                           },
                           decoration: InputDecoration(
                               fillColor: Colors.white,
                               filled: true,
-                              labelText: ConstString.enterYourPassword,
+                              labelText: AppString.enterYourPassword,
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
                         ),
-                        const SizedBox(height: 16,),
+                        const SizedBox(
+                          height: 16,
+                        ),
                         Text(
-                          ConstString.forgetPassword,
+                          AppString.forgetPassword,
                           textAlign: TextAlign.start,
                           style: const TextStyle(
                             color: Color(0xFF0668E3),
@@ -137,14 +144,17 @@ class SignInScreen extends StatelessWidget {
                             height: 0,
                           ),
                         ),
-                        const SizedBox(height: 16,),
+                        const SizedBox(
+                          height: 16,
+                        ),
                         Container(
                           width: width,
                           height: 56,
                           padding: const EdgeInsets.all(10),
                           decoration: ShapeDecoration(
                             color: const Color(0xFF0668E3),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
@@ -152,7 +162,7 @@ class SignInScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                ConstString.signIn,
+                                AppString.signIn,
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
@@ -164,7 +174,9 @@ class SignInScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 44,),
+                        const SizedBox(
+                          height: 44,
+                        ),
                         const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -180,25 +192,29 @@ class SignInScreen extends StatelessWidget {
                               ),
                             ),
                             Divider(),
-            
                           ],
                         ),
-                        const SizedBox(height: 20,),
+                        const SizedBox(
+                          height: 20,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset(ConstImage.google),
-                            const SizedBox(width: 24,),
-                            Image.asset(ConstImage.apple),
-            
+                            Image.asset(AppImage.google),
+                            const SizedBox(
+                              width: 24,
+                            ),
+                            Image.asset(AppImage.apple),
                           ],
                         ),
-                        const SizedBox(height: 20,),
+                        const SizedBox(
+                          height: 20,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              ConstString.didNotHaveAnAccount,
+                              AppString.didNotHaveAnAccount,
                               style: const TextStyle(
                                 color: Color(0xFF333333),
                                 fontSize: 14,
@@ -207,31 +223,22 @@ class SignInScreen extends StatelessWidget {
                                 height: 0,
                               ),
                             ),
-                            TextButton(onPressed: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen(),)) ;
-                            },
+                            TextButton(
+                                onPressed: () {
+                                  Get.to(SignUpScreen());
+                                },
                                 child: Text(
-                              ConstString.signUp,
-                              style: const TextStyle(
-                                color: Color(0xFF0668E3),
-                                fontSize: 16,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w600,
-                                height: 0,
-                              ),
-                            )
-                            )
+                                  AppString.signUp,
+                                  style: const TextStyle(
+                                    color: Color(0xFF0668E3),
+                                    fontSize: 16,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w600,
+                                    height: 0,
+                                  ),
+                                ))
                           ],
                         )
-            
-            
-            
-            
-            
-            
-            
-            
-            
                       ],
                     ),
                   ),

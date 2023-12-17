@@ -1,4 +1,4 @@
-import 'package:find_worker/utils/const_image.dart';
+import 'package:find_worker/utils/app_image.dart';
 import 'package:flutter/material.dart';
 
 class Test extends StatelessWidget {
@@ -72,7 +72,7 @@ class Test extends StatelessWidget {
                     SizedBox(
                       width: 24,
                       height: 24,
-                      child: Stack(children: [Image.asset(ConstImage.hand)]),
+                      child: Stack(children: [Image.asset(AppImage.hand)]),
                     ),
                     SizedBox(width: 10),
                     Text(
@@ -112,7 +112,7 @@ class Test extends StatelessWidget {
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(),
                       child:
-                      Stack(children: [Image.asset(ConstImage.userGroup)]),
+                      Stack(children: [Image.asset(AppImage.userGroup)]),
                     ),
                     const SizedBox(width: 10),
                     const Text(
@@ -301,7 +301,7 @@ class Test extends StatelessWidget {
               left: 173,
               top: 157,
               child: Image.asset(
-                ConstImage.logo,
+                AppImage.logo,
                 width: 80,
                 height: 80,
               ),
@@ -311,7 +311,7 @@ class Test extends StatelessWidget {
               child: Container(
                   margin: EdgeInsets.only(left: 20),
                   child: Image.asset(
-                    ConstImage.service,
+                    AppImage.service,
                     width: 350,
                     height: 260,
                   )),

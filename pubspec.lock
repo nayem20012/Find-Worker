@@ -62,6 +62,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_advanced_switch:
+    dependency: "direct main"
+    description:
+      name: flutter_advanced_switch
+      sha256: b16c92c648a35c95cf9cfd0d6cf3391765f1c9cc5786418999d0058ed51f3d6b
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -131,6 +139,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  percent_indicator:
+    dependency: "direct main"
+    description:
+      name: percent_indicator
+      sha256: c37099ad833a883c9d71782321cb65c3a848c21b6939b6185f0ff6640d05814c
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.2.3"
   sky_engine:
     dependency: transitive
     description: flutter

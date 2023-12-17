@@ -4,17 +4,13 @@ import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
   CustomButton(
       {super.key,
-        this.color = Colors.blue,
-        required this.title,
-        this.horizontal = 20,
-        this.height = 50,
-        this.fontSize = 18,
-        this.radius = 0,
-        required this.onTap});
+      required this.title,
+      this.height = 56,
+      this.fontSize = 18,
+      this.radius = 8,
+      required this.onTap});
 
-  Color color;
   String title;
-  double horizontal;
   Function() onTap;
   double height;
   double fontSize;
@@ -22,19 +18,27 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: horizontal),
-      child: GestureDetector(
-        onTap: onTap,
-        child: Container(
-          height: height,
-          decoration: BoxDecoration(
-              color: color, borderRadius: BorderRadius.circular(radius)),
-          child: Center(
-              child: Text(title,
-                  style: TextStyle(color: Colors.white, fontSize: fontSize))),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: height,
+        decoration: ShapeDecoration(
+          color: const Color(0xFF0668E3),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius)),
         ),
-      ),
+        child: Center(
+          child: Text(
+            title,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: fontSize,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        )),
     );
+
+
   }
 }

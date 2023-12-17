@@ -1,5 +1,5 @@
 import 'package:find_worker/controller/controller.dart';
-import 'package:find_worker/utils/const_string.dart';
+import 'package:find_worker/utils/app_string.dart';
 import 'package:find_worker/view/screen/verify_email_screen.dart';
 import 'package:find_worker/view/widgets/custom_background.dart';
 import 'package:flutter/material.dart';
@@ -23,12 +23,8 @@ class SignUpScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(ConstString.signUp, textAlign: TextAlign.center),
-            ],
-          ),
+          title: Text(AppString.signUp, textAlign: TextAlign.center),
+          centerTitle: true,
         ),
         body: Form(
           child: Padding(
@@ -43,7 +39,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ConstString.fullName,
+                        AppString.fullName,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 14,
@@ -62,14 +58,14 @@ class SignUpScreen extends StatelessWidget {
                     controller: signUpController.fullNameController,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return '${ConstString.pleaseEnter} ${ConstString.fullName}';
+                        return '${AppString.pleaseEnter} ${AppString.fullName}';
                       }
                       return null;
                     },
                     decoration: InputDecoration(
                         fillColor: Colors.white,
                         filled: true,
-                        labelText: ConstString.enterYourFullName,
+                        labelText: AppString.enterYourFullName,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
                   ),
@@ -80,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ConstString.dateOfBirth,
+                        AppString.dateOfBirth,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 14,
@@ -104,14 +100,14 @@ class SignUpScreen extends StatelessWidget {
                           controller: signUpController.dateController,
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return '${ConstString.pleaseEnter} ${ConstString.fullName}';
+                              return '${AppString.pleaseEnter} ${AppString.fullName}';
                             }
                             return null;
                           },
                           decoration: InputDecoration(
                               fillColor: Colors.white,
                               filled: true,
-                              labelText: ConstString.dd,
+                              labelText: AppString.dd,
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
                         ),
@@ -123,14 +119,14 @@ class SignUpScreen extends StatelessWidget {
                           controller: signUpController.monthController,
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return '${ConstString.pleaseEnter} ${ConstString.fullName}';
+                              return '${AppString.pleaseEnter} ${AppString.fullName}';
                             }
                             return null;
                           },
                           decoration: InputDecoration(
                               fillColor: Colors.white,
                               filled: true,
-                              labelText: ConstString.mm,
+                              labelText: AppString.mm,
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
                         ),
@@ -142,14 +138,14 @@ class SignUpScreen extends StatelessWidget {
                           controller: signUpController.yearController,
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return '${ConstString.pleaseEnter} ${ConstString.fullName}';
+                              return '${AppString.pleaseEnter} ${AppString.fullName}';
                             }
                             return null;
                           },
                           decoration: InputDecoration(
                               fillColor: Colors.white,
                               filled: true,
-                              labelText: ConstString.yy,
+                              labelText: AppString.yy,
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
                         ),
@@ -163,7 +159,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ConstString.gender,
+                        AppString.gender,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 18,
@@ -237,7 +233,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ConstString.email,
+                        AppString.email,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 14,
@@ -256,14 +252,14 @@ class SignUpScreen extends StatelessWidget {
                     controller: signUpController.fullNameController,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return '${ConstString.pleaseEnter} ${ConstString.email}';
+                        return '${AppString.pleaseEnter} ${AppString.email}';
                       }
                       return null;
                     },
                     decoration: InputDecoration(
                         fillColor: Colors.white,
                         filled: true,
-                        labelText: ConstString.enterYourEmail,
+                        labelText: AppString.enterYourEmail,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
                   ),
@@ -274,7 +270,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ConstString.phoneNumber,
+                        AppString.phoneNumber,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 14,
@@ -311,14 +307,14 @@ class SignUpScreen extends StatelessWidget {
                           controller: signUpController.fullNameController,
                           validator: (value) {
                             if (value!.isEmpty) {
-                              return '${ConstString.pleaseEnter} ${ConstString.email}';
+                              return '${AppString.pleaseEnter} ${AppString.email}';
                             }
                             return null;
                           },
                           decoration: InputDecoration(
                               fillColor: Colors.white,
                               filled: true,
-                              labelText: ConstString.enterYourEmail,
+                              labelText: AppString.enterYourEmail,
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
                         ),
@@ -332,7 +328,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ConstString.address,
+                        AppString.address,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 14,
@@ -351,14 +347,14 @@ class SignUpScreen extends StatelessWidget {
                     controller: signUpController.fullNameController,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return '${ConstString.pleaseEnter} ${ConstString.address}';
+                        return '${AppString.pleaseEnter} ${AppString.address}';
                       }
                       return null;
                     },
                     decoration: InputDecoration(
                         fillColor: Colors.white,
                         filled: true,
-                        labelText: ConstString.enterYourAddress,
+                        labelText: AppString.enterYourAddress,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
                   ),
@@ -369,7 +365,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ConstString.password,
+                        AppString.password,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 14,
@@ -388,14 +384,14 @@ class SignUpScreen extends StatelessWidget {
                     controller: signUpController.fullNameController,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return '${ConstString.pleaseEnter} ${ConstString.password}';
+                        return '${AppString.pleaseEnter} ${AppString.password}';
                       }
                       return null;
                     },
                     decoration: InputDecoration(
                         fillColor: Colors.white,
                         filled: true,
-                        labelText: ConstString.enterYourPassword,
+                        labelText: AppString.enterYourPassword,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
                   ),
@@ -406,7 +402,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        ConstString.confirmPassword,
+                        AppString.confirmPassword,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 14,
@@ -425,14 +421,14 @@ class SignUpScreen extends StatelessWidget {
                     controller: signUpController.fullNameController,
                     validator: (value) {
                       if (value!.isEmpty) {
-                        return '${ConstString.pleaseEnter} ${ConstString.confirmPassword}';
+                        return '${AppString.pleaseEnter} ${AppString.confirmPassword}';
                       }
                       return null;
                     },
                     decoration: InputDecoration(
                         fillColor: Colors.white,
                         filled: true,
-                        labelText: ConstString.enterYourConfirmPassword,
+                        labelText: AppString.enterYourConfirmPassword,
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
                   ),
@@ -441,11 +437,7 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => VerifyEmailScreen(),
-                          ));
+                      Get.to(VerifyEmailScreen());
                     },
                     child: Container(
                       width: width,
@@ -458,7 +450,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          ConstString.signUp,
+                          AppString.signUp,
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 18,
@@ -476,7 +468,7 @@ class SignUpScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        ConstString.alreadyHaveAnAccount,
+                        AppString.alreadyHaveAnAccount,
                         style: const TextStyle(
                           color: Color(0xFF333333),
                           fontSize: 14,
@@ -489,7 +481,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                       GestureDetector(
                         child: Text(
-                          ConstString.signIn,
+                          AppString.signIn,
                           style: const TextStyle(
                             color: Color(0xFF0668E3),
                             fontSize: 16,
